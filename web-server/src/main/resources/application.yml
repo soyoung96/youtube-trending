@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: youtube-trending
+  cloud:
+    openfeign:
+      client:
+        config:
+          youtube-api:
+            url: https://yt-api.p.rapidapi.com
+            connect-timeout: 10000
+            read-timeout: 10000
+            logger-level: basic
+      httpclient:
+        disable-ssl-validation: true
+logging:
+  level:
+    com.yellowsunn.youtubetrending.infrastructure.http: debug
+
+rapid-api:
+  key: aa4a462ad2mshfd8ac8309875080p1d4f24jsn7613aa4e11c9
